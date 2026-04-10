@@ -1,0 +1,337 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f8e7ea;
+  color: #6b4f4f;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* repeating mini cross background */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image:
+    url("data:image/svg+xml,%3Csvg width='120' height='120' viewBox='0 0 120 120' xmlns='http://www.w3.org/2000/svg'%3E%3Cg opacity='0.22'%3E%3Crect x='56' y='18' width='8' height='46' fill='%23d8c2ae'/%3E%3Crect x='37' y='37' width='46' height='8' fill='%23d8c2ae'/%3E%3C/g%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 120px 120px;
+  z-index: -1;
+}
+
+.page {
+  width: 100%;
+}
+
+/* main section */
+
+.main-header {
+  padding: 0;
+  margin: 0;
+}
+
+.logo {
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.tagline {
+  display: block;
+  text-align: center;
+  margin: 5px auto 0;
+}
+.hero-cross-section {
+  padding: 0px 20px 30px;
+  display: flex;
+  justify-content: center;
+}
+.cross-layout {
+  position: relative;
+  width: 100%;
+  max-width: 1050px;
+  min-height: 1100px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* cross */
+.cross {
+  position: relative;
+  width: 760px;
+  height: 980px;
+}
+
+.cross-vertical {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 980px;
+  background: #fff8f3;
+  box-shadow: 0 8px 30px rgba(107, 79, 79, 0.08);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.cross-horizontal {
+  position: absolute;
+  left: 50%;
+  top: 400px;
+  transform: translateX(-50%);
+  width: 1000px;
+  height: 60px;
+  background: #fff8f3;
+  box-shadow: 0 8px 30px rgba(107, 79, 79, 0.08);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 40px;
+}
+
+.prayer-hands {
+  font-size: 2rem;
+  opacity: 0.8;
+}
+
+.scripture {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5rem;
+  font-style: italic;
+  color: #9c6f76;
+  text-align: center;
+  line-height: 1.1;
+}
+
+.scripture span {
+  font-size: 1.7rem;
+  white-space: nowrap;
+}
+
+/* product cards  desktop version*/
+.product-card {
+  position: absolute;
+  width: 320px;
+  background: #fff8f3;
+  padding: 14px 14px 16px;
+  box-shadow: 0 10px 25px rgba(107, 79, 79, 0.10);
+  text-align: center;
+}
+
+.product-image {
+  width: 100%;
+  height: 260px;
+  background: #f9eff0;
+  border: 3px solid #fffdfc;
+  box-shadow: inset 0 0 0 1px rgba(216, 194, 174, 0.4);
+}
+
+.buy-link {
+  display: inline-block;
+  margin-top: 12px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.2rem;
+  font-style: italic;
+  color: #c27d8a;
+  text-decoration: underline;
+}
+
+.buy-link:hover {
+  background: #e8cdd2;
+  transform: translateY(-2px);
+}
+
+/* positions */
+.top-left {
+  top: 90px;
+  left: -66px;
+}
+
+.top-right {
+  top: 90px;
+  right: -60px;
+}
+
+.bottom-left {
+  bottom: 200px;
+  left: -60px;
+}
+
+.bottom-right {
+  bottom: 200px;
+  right: -60px;
+}
+
+/* bottom section */
+.brand-section {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 10px 20px 90px;
+  text-align: center;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  margin-bottom: 28px;
+  color: #c27d8a;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  width: 320px;
+  max-width: 30%;
+  height: 1px;
+  background: rgba(194, 125, 138, 0.45);
+}
+
+.bow {
+  font-size: 1.6rem;
+}
+
+.brand-description {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2rem;
+  color: #7e5e5e;
+  line-height: 1.4;
+  margin-bottom: 36px;
+}
+
+.faith-message {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.1rem;
+  font-style: italic;
+  color: #9c6f76;
+  padding-top: 28px;
+  border-top: 1px solid rgba(194, 125, 138, 0.25);
+}
+
+/* responsive tablet version*/
+@media (max-width: 900px) {
+  .cross-layout {
+    min-height: 820px;
+  }
+
+  .cross {
+    width: 100%;
+    max-width: 620px;
+    height: 720px;
+  }
+
+  .cross-vertical {
+    width: 100px;
+  }
+
+  .cross-horizontal {
+    width: 100%;
+    max-width: 560px;
+    height: 110px;
+    top: 155px;
+  }
+
+  .scripture {
+    font-size: 1.8rem;
+  }
+
+  .scripture span {
+    font-size: 1.4rem;
+  }
+
+  .product-card {
+    width: 150px;
+  }
+
+  .top-left {
+    top: 230px;
+    left: 0;
+  }
+
+  .top-right {
+    top: 230px;
+    right: 0;
+  }
+
+  .bottom-left {
+    bottom: 130px;
+    left: 40px;
+  }
+
+  .bottom-right {
+    bottom: 130px;
+    right: 40px;
+  }
+
+  .brand-description,
+  .faith-message {
+    font-size: 1.7rem;
+  }
+}
+/*mobile version*/
+@media (max-width: 640px) {
+  .hero-cross-section {
+    padding-top: 30px;
+  }
+
+  .cross-layout {
+    min-height: auto;
+    display: block;
+  }
+
+  .cross {
+    width: 100%;
+    height: 540px;
+    margin: 0 auto 40px;
+  }
+
+  .cross-vertical {
+    width: 80px;
+  }
+
+  .cross-horizontal {
+    width: 100%;
+    height: 95px;
+    top: 110px;
+    padding: 15px 18px;
+  }
+
+  .scripture {
+    font-size: 1.35rem;
+  }
+
+  .scripture span {
+    display: block;
+    font-size: 1.1rem;
+    margin-top: 6px;
+  }
+
+  .prayer-hands {
+    font-size: 1.4rem;
+  }
+
+  .product-card {
+    position: static;
+    width: 190px;
+    margin: 18px auto;
+  }
+
+  .brand-description {
+    font-size: 1.5rem;
+  }
+
+  .faith-message {
+    font-size: 1.6rem;
+  }
+}
